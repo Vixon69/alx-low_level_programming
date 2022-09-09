@@ -7,6 +7,7 @@
  */
 int main(void)
 {
+	int(c, i, li, lli, f);
 	c = sizeof(char);
 	i = sizeof(int);
 	li = sizeof(long int);
