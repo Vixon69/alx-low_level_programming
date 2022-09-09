@@ -1,6 +1,6 @@
 #include<unistd.h>
 /**
- * main - Write a C program that prints exactly and followed by a new line, to the standard error.
+ * main - Write a C program that prints exactly and in standard error
  * Return: Always 0 (success)
  */
 int main(void)
