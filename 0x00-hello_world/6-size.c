@@ -7,7 +7,11 @@
  */
 int main(void)
 {
-	int(c, i, li, lli, f);
+	char c;
+	int i;
+	long int li;
+	long long int lli;
+	float f;
 	c = sizeof(char);
 	i = sizeof(int);
 	li = sizeof(long int);
