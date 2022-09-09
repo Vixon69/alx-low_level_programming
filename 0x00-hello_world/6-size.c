@@ -7,10 +7,16 @@
  */
 int main(void)
 {
-	printf("%c/n", sizeof(char));
-	printf("%d/n", sizeof(int));
-	printf("%lu/n", sizeof(long int));
-	printf("%lu/n", sizeof(long long int));
-	printf("%lu/n", sizeof(float));
+	c = sizeof(char);
+	i = sizeof(int);
+	li = sizeof(long int);
+	lli = sizeof(long long int);
+	f = sizeof(float);
+
+	printf("Size of a char: %lu byte(s)", c);
+	printf("Size of a int: %lu byte(s)", i);
+	printf("Size of a long int: %lu byte(s)", li);
+	printf("Size of a long long int: %lu byte(s)", lli);
+	printf("Size of a float: %lu byte(s)", f);
 	return (0);
 }
