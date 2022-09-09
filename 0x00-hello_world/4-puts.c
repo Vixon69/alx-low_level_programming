@@ -2,7 +2,7 @@
 /**
  * main - printing to standard output using "puts"
  *
- * Return - 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
