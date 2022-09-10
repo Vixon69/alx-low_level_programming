@@ -13,12 +13,12 @@ int main(void)
 		putchar(num);
 		if (num == '9')
 		{
+			putchar('\n');
 			return (0);
 		}
 		putchar(',');
 		putchar(' ');
 	}
-	putchar('\n');
 
 	return (0);
 }
