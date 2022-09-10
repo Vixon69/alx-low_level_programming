@@ -8,10 +8,14 @@ int main(void)
 {
 	int num;
 
-	for (num = '01'; num <= '89'; num++)
+	for (num = 1; num <= 89; num++)
 	{
+		if ( num <= 9 )
+		{
+			putchar('0');
+		}
 		putchar(num);
-		if (num == '89')
+		if (num == 89)
 		{
 			putchar('\n');
 			return (0);
