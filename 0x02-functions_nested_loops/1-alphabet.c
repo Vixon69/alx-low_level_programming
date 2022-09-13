@@ -2,9 +2,9 @@
 /**
  * main - write a function that prints the alphabet
  *
- * Return: Always 0 (success)
+ * Return: void
  */
-int main(void)
+void print_alphabet(void)
 {
 	char alphabet;
 
@@ -12,7 +12,7 @@ int main(void)
 	{
 		_putchar (alphabet);
 	}
+
 	_putchar ('\n');
 
-	return (0);
 }
