@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 /**
  * _abs - prnt absolute value.
@@ -10,7 +9,17 @@
 
 int _abs(int j)
 {
-	_putchar (abs(j));
+	if (j > 0)
+	{
+		return (j);
+	}
+	else if (j < 0)
+	{
+		return (-j);
+	}
+	else
+	{
+		return (j);
+	}
 
-	return (0);
 }
