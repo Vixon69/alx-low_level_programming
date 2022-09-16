@@ -1,35 +1,32 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_to_98 - print to 98
+ * print_to_98 - prints numbers to 98
+ * @n: starting integer
  *
- * @n: an ascii character
+ * Description: prints all natural number from n - 98
  *
- * Return: Always 0 (success)
+ * Return: void
  */
+
 void print_to_98(int n)
 {
-	int tens;
-
-	for (n = '0'; n >= '9'; n++)
+	if (n < 98)
 	{
-		_putchar (n);
-		_putchar (',');
-		_putchar (' ');
-		if (n == '9')
+		while (n < 98)
 		{
-			n = '1';
-			while (n != '9')
-			{
-				for (tens = '0'; tens >= '9'; tens++)
-				{
-					_putchar (n);
-					_putchar (tens);
-					_putchar (',');
-					_putchar (' ');
-				}
-				n++;
-			}
+			printf("%d, ", n);
+			n++;
 		}
 	}
+	else if (n > 98)
+	{
+		while (n > 98)
+		{
+			printf("%d, ", n);
+			n--;
+		}
+	}
+	printf("98\n");
 }
