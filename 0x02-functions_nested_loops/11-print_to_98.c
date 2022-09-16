@@ -11,17 +11,17 @@ void print_to_98(int n)
 {
 	int tens;
 
-	for (n = 0; n >= 9; n++)
+	for (n = '0'; n >= '9'; n++)
 	{
 		_putchar (n);
 		_putchar (',');
 		_putchar (' ');
-		if (n == 9)
+		if (n == '9')
 		{
-			n = 1;
-			while (n != 9)
+			n = '1';
+			while (n != '9')
 			{
-				for (tens = 0; tens >= 9; tens++)
+				for (tens = '0'; tens >= '9'; tens++)
 				{
 					_putchar (n);
 					_putchar (tens);
