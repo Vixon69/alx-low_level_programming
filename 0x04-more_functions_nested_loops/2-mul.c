@@ -13,9 +13,9 @@ int mul(int a, int b)
 {
 	int multiply;
 
-	multiply = a * b;
+	multiply = (a * b);
 
-	printf("%d\n", multiply);
+	printf("%d * %d = %d\n", a, b multiply);
 
 	return (0);
 }
