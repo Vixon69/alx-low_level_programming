@@ -8,7 +8,7 @@ int main(void)
 {
 	int n, n2, multiples;
 
-	while (n = 3 || n = 5)
+	while (n = 3)
 	{
 		n2 = 1;
 
@@ -16,7 +16,7 @@ int main(void)
 		multiples = (n * n2);
 
 		printf("%d\n", multiples);
-		if (muliples == 1024)
+		if (multiples == 1024)
 		{
 			return (0);
 		}
