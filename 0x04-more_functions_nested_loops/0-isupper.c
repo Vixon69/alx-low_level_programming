@@ -20,5 +20,5 @@ int _isupper(int c)
 		else
 			return (0);
 	}
-	return (0);
+	return (1);
 }
