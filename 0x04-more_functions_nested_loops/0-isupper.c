@@ -14,14 +14,15 @@ int _isupper(int c)
 
 	for (upper = 65; upper <= 90; upper++)
 	{
+		if (c >=0 && c <= 64)
+		{
+			return (0);
+		}
+		else if (c >= 90 && c <= 126)
+			return (0);
 		if (c == upper)
 		{
 			r = 1;
-			break;
-		}
-		if (c != upper)
-		{
-			r =0;
 			break;
 		}
 	}
