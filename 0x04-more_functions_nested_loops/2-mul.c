@@ -2,12 +2,13 @@
 #include "main.h"
 
 /**
- * mul: multiply 2 integer
+ * mul - multiply 2 integer
  *
- * @a: Ascii
- * @b: Ascii
+ * @a: Ascii value
  *
- * Return: 0
+ * @b: Ascii value
+ *
+ * Return: Always 0 (Success)
  */
 int mul(int a, int b)
 {
