@@ -15,7 +15,7 @@ int mul(int a, int b)
 
 	multiply = (a * b);
 
-	putchar (multiply);
+	printf("%d\n", multiply);
 
 	return (0);
 }
