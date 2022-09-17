@@ -14,7 +14,7 @@ int _isupper(int c)
 
 	for (upper = 65; upper <= 90; upper++)
 	{
-		if (c >=0 && c <= 64)
+		if (c >= 0 && c <= 64)
 		{
 			return (0);
 		}
