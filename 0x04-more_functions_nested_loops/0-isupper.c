@@ -19,7 +19,11 @@ int _isupper(int c)
 			r = 1;
 			break;
 		}
-
+		if (c != upper)
+		{
+			r =0;
+			break;
+		}
 	}
 	return (r);
 }
