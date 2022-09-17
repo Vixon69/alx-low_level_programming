@@ -14,6 +14,8 @@ int main(void)
 
 		n2++;
 		multiples = (n * n2);
+
+		printf("%d\n", multiples);
 		if (muliples == 1024)
 		{
 			return (0);
