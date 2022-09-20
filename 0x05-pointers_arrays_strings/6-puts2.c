@@ -24,8 +24,7 @@ void puts2(char *str)
 		{
 			_putchar(str[n]);
 		}
-		n++;
-
-	_putchar('\n');
+		n++;	
 	}
+	_putchar('\n');
 }
