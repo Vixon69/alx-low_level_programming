@@ -20,10 +20,5 @@ void puts2(char *str)
 		{
 			_putchar(str[n]);
 		}
-		else if (n % 2 != 0)
-		{
-			n++;
-			_putchar(str[n]);
-		}
 	}
 }
