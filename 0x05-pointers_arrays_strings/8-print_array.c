@@ -11,12 +11,17 @@
 void print_array(int *a, int n)
 {
 	int i;
+	int size;
+	int last;
+
+	size = sizeof(a) / sizeof(int);
+	last = size - 1;
 
 	for (i = 0; i <= n; i++)
 	{
-		if (i == '\0')
+		if (i == last)
 		{
-			printf("%d ", a[n]);
+			printf("%d ", last);
 		}
 		else
 			printf("%d, ", a[i]);
