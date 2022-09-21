@@ -14,7 +14,7 @@ void print_array(int *a, int n)
 	int size;
 	int last;
 
-	size = sizeof(a) / sizeof(int);
+	size = sizeof(*a) / sizeof(int);
 	last = size - 1;
 
 	for (i = 0; i <= n; i++)
