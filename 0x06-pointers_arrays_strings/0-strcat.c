@@ -17,6 +17,7 @@ char *_strcat(char *dest, char *src)
 
 		if (i == dest['\0'])
 		{
+			_putchar(' ');
 			i = 0;
 			for (; i <= src['\0']; i++)
 			{
