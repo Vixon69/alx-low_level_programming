@@ -1,53 +1,26 @@
 #include "main.h"
-
 /**
- * _strcat - write a function that concantenates two strings
- * @dest: the destination
- * @src: the word to be appended
- * Return: dest
+ * _strcat - concatenates two strings,
+ * @dest: destination.
+ * @src: source.
+ * Return: the pointer to dest.
  */
-
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-	int n = 0;
+	int count = 0, count2 = 0;
 
-	while (n != '\0')
+	while (*(dest + count) != '\0')
 	{
-		i++;
-		_putchar(dest[i]);
+		count++;
+	}
 
-		if (i == dest['\0'])
-		{
-			_putchar(' ');
-			for (; n <= src['\0']; n++)
-			{
-				_putchar(src[n]);
-			}
-			_putchar('\n');
-			if (n == '\0')
-			{
-				for (n = 0; n <= src['\0']; n++)
-				{
-					_putchar(src[n]);
-				}
-				_putchar('\n');
-				while (n != '\0')
-				{
-					i++;
-					_putchar(dest['\0']);
-
-					if (i == dest['\0'])
-					{
-						_putchar(' ');
-						for (n = 0; n <= src['\0']; n++)
-						{
-							_putchar(src[n]);
-						}
-					}
-				}
-			}
-		}
+	while (count2 >= 0)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
 	}
 	return (dest);
 }
