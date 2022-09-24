@@ -14,7 +14,7 @@ char *cap_string(char *s)
 		if ((*(s + count) >= 65) && (*(s + count) <= 90))
 			*(s + count) = *(s + count) + 32;
 		else if ((*(s + count) >= 33) && (*(s + count) <= 125))
-			_putchar(*(s + count);
+			*(s + count) = *(s + count) + 92;
 		count++;
 	}
 
