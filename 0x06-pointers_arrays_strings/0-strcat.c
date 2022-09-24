@@ -10,8 +10,9 @@
 char *_strcat(char *dest, char *src)
 {
 	int i = 0;
+	int n = 0;
 
-	while (i != '\0')
+	while (n != '\0')
 	{
 		i++;
 		_putchar(dest[i]);
@@ -19,13 +20,33 @@ char *_strcat(char *dest, char *src)
 		if (i == dest['\0'])
 		{
 			_putchar(' ');
-			i = 0;
-			for (; i <= src['\0']; i++)
+			for (; n <= src['\0']; n++)
 			{
-				_putchar(src[i]);
+				_putchar(src[n]);
 			}
 			_putchar('\n');
+			if (n == '\0')
+			{
+				for (n = 0; n <= src['\0']; n++)
+				{
+					_putchar(src[n]);
+				}
+				_putchar('\n');
+				while (n != '\0')
+				{
+					i++;
+					_putchar(dest['\0']);
 
+					if (i == dest['\0'])
+					{
+						_putchar(' ');
+						for (n = 0; n <= src['\0']; n++)
+						{
+							_putchar(src[n]);
+						}
+					}
+				}
+			}
 		}
 	}
 	return (dest);
