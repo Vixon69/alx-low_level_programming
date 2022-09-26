@@ -15,11 +15,7 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			*(s + i);
-		}
-		else
-		{
-			s[i] = '\0';
+			_putchar(*(s + i));
 		}
 	}
 	return (s);
