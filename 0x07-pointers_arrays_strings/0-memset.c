@@ -4,6 +4,7 @@
  * @s: the memory address
  * @b: the byte
  * @n: the number of times
+ * Return: s
  */
 
 char *_memset(char *s, char b, unsigned int n)
