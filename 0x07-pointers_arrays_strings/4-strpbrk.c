@@ -10,15 +10,21 @@
 
 char *_strpbrk(char *s, char *accept)
 {
+	int b = 0;
+
 	while (*s != '\0')
 	{
 		while (*accept != '\0')
 		{
-			if (*s == *accept)
+			if (*s != *accept)
 			{
+				b = *(s + 1);
+				b - 1;
 
 				return (s);
 			}
+			else
+				break;
 			accept++;
 		}
 		s++;
