@@ -10,22 +10,16 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int b = 0;
+	int i;
 
-	while (*s != '\0')
+	while (*s)
 	{
-		while (*accept != '\0')
+		for (i = 0; accept[i]; i++)
 		{
-			if (*s != *accept)
+			if (*s == accept[i])
 			{
-				b = *(s + 1);
-				b - 1;
-
 				return (s);
 			}
-			else
-				break;
-			accept++;
 		}
 		s++;
 	}
