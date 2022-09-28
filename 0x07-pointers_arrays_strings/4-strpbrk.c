@@ -10,18 +10,18 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	while (*s++ != '\0')
+	while (*s != '\0')
 	{
-		while (*accept++ != '\0')
+		while (*accept != '\0')
 		{
-			if (*s != *(accept + 1))
+			if (*s != *accept)
 			{
 
-				return (*s);
+				return (s);
 			}
-			else
-				break;
+			accept++;
 		}
+		s++;
 	}
 	return (NULL);
 }
