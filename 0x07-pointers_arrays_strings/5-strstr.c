@@ -20,7 +20,9 @@ char *_strstr(char *haystack, char *needle)
 			}
 			else
 				break;
+			needle++;
 		}
+		haystack++;
 	}
 	return (NULL);
 
