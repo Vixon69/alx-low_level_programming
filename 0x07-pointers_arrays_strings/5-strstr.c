@@ -21,7 +21,7 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 		}
-		if (!*needle)
+		if (!(*needle))
 		{
 			return (result);
 		}
