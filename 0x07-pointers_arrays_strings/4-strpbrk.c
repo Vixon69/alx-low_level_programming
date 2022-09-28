@@ -17,7 +17,7 @@ char *_strpbrk(char *s, char *accept)
 			if (*s != *(accept + 1))
 			{
 
-				return (s);
+				return (*s);
 			}
 			else
 				break;
