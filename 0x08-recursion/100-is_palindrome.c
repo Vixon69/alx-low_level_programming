@@ -10,7 +10,7 @@ int is_palindrome(char *s)
 	if (*s >= 0 && *s <= 9)
 		return (1);
 	else if ((s[0]) == (*s / 10))
-		return (1);
+		return (0);
 	return (1);
 
 }
