@@ -37,7 +37,6 @@ char *str_concat(char *s1, char *s2)
 			}
 			*ch = _putchar(s1[i]);
 		}
-		continue;
 		for (j = 0; s2[j] < '\0'; j++)
 		{
 			if (s1 == NULL)
