@@ -29,10 +29,9 @@ char *str_concat(char *s1, char *s2)
 	for (f = 0; f <= size; f++)
 	{
 		*ch = s1[f];
-		return (ch);
 	}
+	return (ch);
 
-	return (NULL);
 
 
 }
