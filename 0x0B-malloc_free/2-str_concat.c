@@ -33,6 +33,7 @@ char *str_concat(char *s1, char *s2)
 			*ch = s1[g];
 		}
 		*ch = s2[f];
+	}
 
 	return (ch);
 
