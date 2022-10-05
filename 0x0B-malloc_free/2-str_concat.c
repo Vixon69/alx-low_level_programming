@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i < s1['\0']; i++)
 	{
-		*ch = s1[i];
+		*ch = _putchar(s1[i]);
 	}
 
 	return (ch);
