@@ -25,20 +25,32 @@ char *str_concat(char *s1, char *s2)
 
 	if (ch == NULL)
 		return (NULL);
-	
-	if (s2[0] == '\0')
+	if ((s1[0] != '\0') && (s2[0] != '\0'))
 	{
 		for (i = 0; s1[i] != '\0'; i++)
 		{
 			*ch = _putchar(s1[i]);
 		}
-		return (ch);
-	}
-	if (s1[0] == '\0')
-	{
-		for (j = 0; s2[j] < '\0'; j++)
+		for (i = 0; s2[j] != '\0'; i++)
 		{
 			*ch = _putchar(s2[j]);
+		}
+		return (ch);
+	}		
+
+	if (s1[0] == '\0')
+	{
+		for (i = 0; s2[i] != '\0'; i++)
+		{
+			*ch = _putchar(s2[i]);
+		}
+		return (ch);
+	}
+	if (s2[0] == '\0')
+	{
+		for (j = 0; s1[j] < '\0'; j++)
+		{
+			*ch = _putchar(s1[j]);
 		}
 		return(ch);
 	}
