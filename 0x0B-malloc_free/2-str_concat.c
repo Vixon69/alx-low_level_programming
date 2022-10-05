@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; s2[j] != '\0'; j++)
 		;
 
-	size = i + j + 1;
+	size = i + j;
 
 	ch = (char *)malloc(sizeof(char) * (size));
 
@@ -30,9 +30,10 @@ char *str_concat(char *s1, char *s2)
 
 	if ((s1[0] != '\0') && (s2[0] != '\0'))
 	{
-		for (i = 0; s1[i] != '\0'; i++)
+		for (j = 0; s2[j] != '\0'; j++)
 		{
-			*ch = printf("%c%c", s1[i], s2[i]);
+			s1[i] = _putchar(s2[j]);
+			ch = s1;
 		}
 		return (ch);
 
