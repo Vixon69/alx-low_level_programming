@@ -26,10 +26,11 @@ char *str_concat(char *s1, char *s2)
 	if (ch == NULL)
 		return (NULL);
 
-	for (f = 0; f <= size; f++)
+	for (f = 0; f < size; f++)
 	{
 		*ch = s1[f];
 	}
+
 	return (ch);
 
 
