@@ -10,9 +10,10 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, f, g, size;
+	int i, j, g, size;
 
 	char *ch;
+	g = 0;
 
 	for (i = 0; s1[i] != '\0'; i++)
 		;
@@ -26,15 +27,16 @@ char *str_concat(char *s1, char *s2)
 	if (ch == NULL)
 		return (NULL);
 
-	for (f = 0; s2[f] != '\0'; f++)
+	while (g >= 0)
 	{
-		for (g = 0; s1[g] != '\0'; g++)
+		s1[i] = s2[g];
+
+		if (s2[g] == '\0')
 		{
-			*ch = s1[g];
-			return (ch);
+			break;
 		}
-		*ch = s2[f];
-		return (ch);
+		i++;
+		g++;
 	}
 
 	return (ch);
