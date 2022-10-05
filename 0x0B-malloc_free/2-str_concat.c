@@ -32,6 +32,7 @@ char *str_concat(char *s1, char *s2)
 		{
 			*ch = _putchar(s1[i]);
 		}
+		return (ch);
 	}
 	if (s1[0] == '\0')
 	{
@@ -39,8 +40,9 @@ char *str_concat(char *s1, char *s2)
 		{
 			*ch = _putchar(s2[j]);
 		}
+		return(ch);
 	}
 
-	return (ch);
+	return (NULL);
 
 }
