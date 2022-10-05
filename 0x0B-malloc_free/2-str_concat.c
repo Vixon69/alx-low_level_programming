@@ -26,19 +26,19 @@ char *str_concat(char *s1, char *s2)
 	if (ch == NULL)
 		return (NULL);
 	
-	while (s1 != NULL)
+	if (s2 == NULL)
 	{
 		for (i = 0; s1[i] != '\0'; i++)
 		{
 			*ch = _putchar(s1[i]);
 		}
-		if (s2 == NULL)
-			break;
 	}
-
-	for (j = 0; s2[j] < '\0'; j++)
+	if (s1 == NULL)
 	{
-		*ch = _putchar(s2[j]);
+		for (j = 0; s2[j] < '\0'; j++)
+		{
+			*ch = _putchar(s2[j]);
+		}
 	}
 
 	return (ch);
