@@ -31,8 +31,10 @@ char *str_concat(char *s1, char *s2)
 		for (g = 0; s1[g] != '\0'; g++)
 		{
 			*ch = s1[g];
+			return (ch);
 		}
 		*ch = s2[f];
+		return (ch);
 	}
 
 	return (ch);
