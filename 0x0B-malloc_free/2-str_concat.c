@@ -26,25 +26,22 @@ char *str_concat(char *s1, char *s2)
 	if (ch == NULL)
 		return (NULL);
 
-	while (size != 0)
-	{
 
-		for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		if (s1 == NULL)
 		{
-			if (s1 == NULL)
-			{
-				break;
-			}
-			*ch = _putchar(s1[i]);
+			break;
 		}
-		for (j = 0; s2[j] < '\0'; j++)
+		*ch = _putchar(s1[i]);
+	}
+	for (j = 0; s2[j] < '\0'; j++)
+	{
+		if (s1 == NULL)
 		{
-			if (s1 == NULL)
-			{
-				break;
-			}
-			*ch = _putchar(s2[j]);
+			break;
 		}
+		*ch = _putchar(s2[j]);
 	}
 
 	return (ch);
