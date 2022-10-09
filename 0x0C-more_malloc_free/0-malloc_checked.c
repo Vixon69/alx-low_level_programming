@@ -13,7 +13,7 @@ void *malloc_checked(unsigned int b)
 
 	i = malloc(sizeof(char) * b);
 
-	if (b == '\0')
+	if (*i == '\0')
 	{
 		printf("%d", 98);
 	}
