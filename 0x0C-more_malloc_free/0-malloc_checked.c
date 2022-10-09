@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * malloc_checked - write a function that allocates memory using malloc
  * @b: the size of the memory allocated
@@ -9,14 +9,13 @@
 
 void *malloc_checked(unsigned int b)
 {
-	int *i;
+	char *i;
 
-	i = malloc(sizeof(int) * b);
+	i = malloc(sizeof(char) * b);
 
 	if (i == NULL)
 	{
-		_putchar(9);
-		_putchar(8);
+		printf("%d", 98);
 		free(i);
 	}
 	return (i);
