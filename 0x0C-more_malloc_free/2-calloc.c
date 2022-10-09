@@ -3,11 +3,13 @@
 #include <stdlib.h>
 
 /**
- * _calloc - Write a function that allocates memory for an array, using malloc.
- * @nmemb:This is the number of elements to be allocated.
- * @size:This is the size of elements.
- * Return:NULL
+ * _memset - copy char
+ * @s: string
+ * @b: input
+ * @n: bytes
+ * Return: string
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
