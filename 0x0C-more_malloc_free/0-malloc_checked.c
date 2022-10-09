@@ -9,17 +9,14 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *i;
-	int *j;
-	int n = 98;
-	j = &n;
+	void *i;
 
-	i = malloc(sizeof(char) * b);
+	i = malloc(b);
 
 	if (i == NULL)
 	{
 		free(i);
-		return (j);
+		exit(98);
 	}
 	else
 		return (i);
