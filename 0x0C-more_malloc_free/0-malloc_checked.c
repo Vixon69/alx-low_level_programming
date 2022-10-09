@@ -9,17 +9,18 @@
 
 void *malloc_checked(unsigned int b)
 {
-	int *i;
+	unsigned int *i;
+	unsigned int **j;
 
-	if (malloc_checked < 0)
-		_putchar('98');
+	i = malloc(sizeof(int) * b);
 
-	i = malloc(sizeof(unsigned int) * b);
 	if (i == NULL)
 	{
-		_putchar(98);
+		_putchar(9);
+		_putchar(8);
 		free(i);
 	}
-	else
-		_putchar(i);
+	j = &i;
+	return (j);
+
 }
