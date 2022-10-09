@@ -13,10 +13,13 @@ void *malloc_checked(unsigned int b)
 
 	i = malloc(sizeof(char) * b);
 
-	if (*i == '\0')
+	if (i == NULL)
 	{
 		printf("%d", 98);
+		free(i);
+		return (NULL);
 	}
+
 	return (i);
 
 }
