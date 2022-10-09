@@ -10,17 +10,18 @@
 void *malloc_checked(unsigned int b)
 {
 	char *i;
+	int *j;
+	int n = 98;
+	j = &n;
 
 	i = malloc(sizeof(char) * b);
 
 	if (i == NULL)
 	{
-		printf("%d", 98);
 		free(i);
+		return (j);
 	}
 	else
 		return (i);
-
-	return (i);
 
 }
