@@ -10,7 +10,6 @@
 void *malloc_checked(unsigned int b)
 {
 	unsigned int *i;
-	unsigned int **j;
 
 	i = malloc(sizeof(int) * b);
 
@@ -20,7 +19,6 @@ void *malloc_checked(unsigned int b)
 		_putchar(8);
 		free(i);
 	}
-	j = &i;
-	return (j);
+	return (i);
 
 }
