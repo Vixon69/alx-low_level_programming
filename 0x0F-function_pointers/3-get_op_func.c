@@ -7,7 +7,7 @@
  * he operation asked by the user
  * @s: the operator given by the user
  *
- * Return: pointer to the function that corresponds to the 
+ * Return: pointer to the function that corresponds to the
  * operator given as a parameter
  */
 
