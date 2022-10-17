@@ -21,9 +21,9 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 	}
 
-	for (i = n; i >= 0; i = va_arg(numbers, int))
+	for (i = n; i != 0; i = va_arg(numbers, int))
 	{
-		Total += i;
+		Total += (i);
 	}
 	va_end(numbers);
 	return (Total);
