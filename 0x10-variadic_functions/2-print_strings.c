@@ -11,22 +11,25 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list words;
 	unsigned int i = 0;
+	char * str;
 
 	va_start(words, n);
 
 	while (i < n)
 	{
-		if (i + 2 == n)
-			break;
+		str = va_arg(words, char *);
 
-		if (va_arg(words, char*) != NULL)
+		if (i + 1 == n)
 		{
-			printf("%s", va_arg(words, char*));
+			break;
 		}
-		else
+
+		if (str == NULL)
 		{
 			printf("(nil)");
 		}
+		else
+			printf("%s", va_arg(words, char *));
 
 		if (separator != NULL)
 		{
