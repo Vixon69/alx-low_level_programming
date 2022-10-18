@@ -11,15 +11,18 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list words;
 	unsigned int i = 0;
+	char *f;
+
+	f = va_arg(words, char*);
 
 	va_start(words, n);
 
 	while (i < n)
 	{
-		if (i + 1 == n)
+		if (i + 2 == n)
 			break;
 
-		if (va_arg(words, char*) == NULL)
+		if (f == NULL)
 		{
 			printf("(nil)");
 		}
