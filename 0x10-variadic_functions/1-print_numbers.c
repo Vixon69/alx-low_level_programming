@@ -1,7 +1,8 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - Write a function that prints numbers, followed by a new line.
+ * print_numbers - Write a function that prints numbers
+ * , followed by a new line.
  * @separator: is the string to be printed between numbers
  * @n: the number of values entered into the function
  *
@@ -17,11 +18,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	while (i < n)
 	{
 		printf("%d",va_arg(nums, int));
-		i++;
+
+		if (i == n)
+			break;
 		if (separator != NULL)
 		{
-			printf("%s", separator);
+			printf("%s ", separator);
 		}
-	_putchar('\n');
+		i++;
 	}
+	va_end(nums);
+	printf("\n");
 }
