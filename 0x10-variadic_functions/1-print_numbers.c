@@ -15,11 +15,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 	va_start(nums, n);
 
-	while (i <= n)
+	while (i < n)
 	{
 		printf("%d", va_arg(nums, int));
 
-		if (i == n)
+		if (i + 1 == n)
 			break;
 
 		if (separator != NULL)
