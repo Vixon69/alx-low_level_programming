@@ -11,9 +11,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list words;
 	unsigned int i = 0;
-	char *f;
-
-	f = va_arg(words, char*);
 
 	va_start(words, n);
 
@@ -22,13 +19,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (i + 2 == n)
 			break;
 
-		if (f == NULL)
+		if (va_arg(words, char*) != NULL)
 		{
-			printf("(nil)");
+			printf("%s", va_arg(words, char*));
 		}
 		else
 		{
-			printf("%s", va_arg(words, char*));
+			printf("(nil)");
 		}
 
 		if (separator != NULL)
