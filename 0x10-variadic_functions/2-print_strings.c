@@ -14,8 +14,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(words, n);
 
-	while (i + 1 < n)
+	while (i < n)
 	{
+		if (i + 1 == n)
+			break;
+
 		if (va_arg(words, char*) == NULL)
 		{
 			printf("(nil)");
