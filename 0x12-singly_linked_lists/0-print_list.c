@@ -12,11 +12,6 @@ size_t print_list(const list_t *h)
 	unsigned int num = h->len;
 	size_t i = 0;
 
-	if (h == NULL)
-	{
-		printf("-> %d elements", 0);
-	}
-
 	while (h != NULL)
 	{
 
