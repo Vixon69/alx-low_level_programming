@@ -12,13 +12,21 @@ size_t print_list(const list_t *h)
 	unsigned int num = h->len;
 	size_t i = 0;
 
-	if (h->next != NULL)
+	if (h == NULL)
+	{
+		printf("-> %d elements", 0);
+	}
+
+	while (h != NULL)
+	{
+
+		if (name == NULL)
+			printf("[%d] %s\n", 0, "(nil)");
+		else
+			printf("[%d] %s\n", num, name);
+		h = h->next;
 		i++;
+	}
 
-	if (name == NULL)
-		printf("[0] (nil)");
-	else
-		printf("[%d] %s", num, name);
-
-	return (i + 1);
+	return (i);
 }
