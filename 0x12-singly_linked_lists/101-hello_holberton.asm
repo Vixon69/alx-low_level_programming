@@ -1,49 +1,15 @@
-.MODEL SMALL
-.STACK 100H
-.DATA
-.CODE
+section .text
+    global main     ;must be declared for linker (ld)
+main:               ;tells linker entry point
+    mov edx,len     ;message length
+    mov ecx,msg     ;message to write
+    mov ebx,1       ;file descriptor (stdout)
+    mov eax,4       ;system call number (sys_write)
+    int 0x80        ;call kernel
 
-MAIN PROC
+    mov eax,1       ;system call number (sys_exit)
+    int 0x80        ;call kernel
 
-MOV AH,2
-
-MOV DL,'H'
-INT 21H
-MOV DL,'e'
-INT 21H
-MOV DL,'l'
-INT 21H
-MOV DL,'l'
-INT 21H
-MOV DL,'o'
-INT 21H
-MOV DL,','
-INT 21H
-
-MOV DL,' '
-INT 21H
-MOV DL,'H'
-INT 21H
-MOV DL,'o'
-INT 21H
-MOV DL,'l'
-INT 21H
-MOV DL,'b'
-INT 21H
-MOV DL,'e'
-INT 21H
-MOV DL,'r'
-INT 21H
-MOV DL,'t'
-INT 21H
-MOV DL,'o'
-INT 21H
-MOV DL,'n'
-INT 21H
-
-MOV AH, 4CH
-INT 21H
-
-
-MAIN ENDP
-    END MAIN
+section .data
+msg db 'Hello, Holberton', 0xa  ;our dear string
+len equ $ - msg              ;length of our dear string
