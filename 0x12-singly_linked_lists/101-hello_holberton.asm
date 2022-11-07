@@ -40,4 +40,3 @@ MOV DL,'o'
 INT 21H
 MOV DL,'n'
 INT 21H
-0xa
