@@ -3,19 +3,19 @@
 /**
  * free_listint - A function that frees a list
  * @head: the pointer to the head node
+ * Return: void
  */
 
 void free_listint(listint_t *head)
 {
+	listint_t *copy;
+
 	while (head->next != NULL)
 	{
-		if (head->next != NULL)
-		{
-			head = head->next;
-			free (head);
-		}
-		else
-			free(head);
+		copy = head;
+		head = head->next;
+		free(copy);
+
 	}
 
 }
